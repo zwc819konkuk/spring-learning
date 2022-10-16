@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-ioc/spring-ioc.iml" filepath="$PROJECT_DIR$/spring-ioc/spring-ioc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-learning.iml" filepath="$PROJECT_DIR$/.idea/spring-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_ioc_02/spring_ioc_02.iml" filepath="$PROJECT_DIR$/spring_ioc_02/spring_ioc_02.iml" />
     </modules>
   </component>
 </project>
