@@ -14,7 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-ioc" target="1.5" />
-      <module name="spring_aop_01" target="1.5" />
+      <module name="spring_aop_01" target="6" />
       <module name="spring_ioc_02" target="1.5" />
     </bytecodeTargetLevel>
   </component>
