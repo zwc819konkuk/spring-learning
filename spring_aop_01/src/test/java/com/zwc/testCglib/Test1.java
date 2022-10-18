@@ -51,6 +51,7 @@ public class Test1 {
         //6、使用代理对象完成功能
         personProxy.eat("包子");
     }
+
 }
 
 @Data
