@@ -16,10 +16,10 @@ public class Test02 {
         int rows = dao.addUser(1, "jack");
         System.out.println(rows);
 
-        System.out.println("==========================");
-
-        EmpDao empDao = context.getBean(EmpDao.class);
-        int rows1 = empDao.addEmp(1, "jack", "ceo");
-        System.out.println(rows1);
+//        System.out.println("==========================");
+//
+//        EmpDao empDao = context.getBean(EmpDao.class);
+//        int rows1 = empDao.addEmp(1, "jack", "ceo");
+//        System.out.println(rows1);
     }
 }

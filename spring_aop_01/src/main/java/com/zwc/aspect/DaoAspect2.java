@@ -10,8 +10,8 @@ import java.util.Arrays;
 
 @Aspect
 @Component
-@Order(1)
-public class DaoAspect {
+@Order(2)
+public class DaoAspect2 {
     //定义一个公共切点 切点表达式直接指向接口 降低耦合度
     @Pointcut("execution(* com.zwc.dao.*.add*(..))")
     public void addPointCut() {
@@ -19,7 +19,7 @@ public class DaoAspect {
 
     @Before("addPointCut()")
     public void methodBefore(JoinPoint joinPoint) {
-        System.out.println("method before invoked...");
+        System.out.println("method before2 invoked...");
         Object[] args = joinPoint.getArgs();
         System.out.println("args:" + Arrays.toString(args));
     }
@@ -30,7 +30,7 @@ public class DaoAspect {
      */
     @After("addPointCut()")
     public void methodAfter() {
-        System.out.println("methodAfter invoked...");
+        System.out.println("methodAfter2 invoked...");
     }
 
     /**
@@ -42,7 +42,7 @@ public class DaoAspect {
      */
     @AfterReturning(value = "addPointCut()", returning = "res")
     public void methodAfterReturning(JoinPoint joinPoint, Object res) {
-        System.out.println("methodAfterReturning invoked...");
+        System.out.println("methodAfterReturning2 invoked...");
         System.out.println(res);
     }
 
@@ -52,7 +52,7 @@ public class DaoAspect {
      */
     @AfterThrowing(value = "addPointCut()", throwing = "ex")
     public void methodAfterThrowing(Exception ex) {
-        System.out.println("methodAfterThrowing invoked...");
+        System.out.println("methodAfterThrowing2 invoked...");
         System.out.println(ex.getMessage());
     }
 
@@ -65,9 +65,9 @@ public class DaoAspect {
      */
     @Around("addPointCut()")
     public Object methodAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("methodAroundA invoked...");
+        System.out.println("methodAroundA2 invoked...");
         Object res = proceedingJoinPoint.proceed();
-        System.out.println("methodAroundB invoked...");
+        System.out.println("methodAroundB2 invoked...");
         return res;
     }
 }
