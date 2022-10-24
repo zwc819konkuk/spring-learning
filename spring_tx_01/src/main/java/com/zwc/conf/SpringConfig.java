@@ -13,10 +13,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-@Configuration
-@ComponentScan(basePackages = "com.zwc")
-@PropertySource("classpath:jdbc.properties")
-@EnableTransactionManagement
+//@Configuration
+//@ComponentScan(basePackages = "com.zwc")
+//@PropertySource("classpath:jdbc.properties")
+//@EnableTransactionManagement
 public class SpringConfig {
 
     @Value("${jdbc.driver}")
