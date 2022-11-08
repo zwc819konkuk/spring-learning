@@ -22,6 +22,5 @@ public class TestTx3 {
     public void testTransMoney1() {
         int rows = accountService.transMoney(1, 2, 100);
         System.out.println(rows);
-
     }
 }
