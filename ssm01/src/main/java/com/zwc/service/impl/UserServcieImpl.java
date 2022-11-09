@@ -8,6 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional
 public class UserServcieImpl implements UserService {
@@ -16,5 +18,9 @@ public class UserServcieImpl implements UserService {
 
     public User findUser(String uname, String password) {
         return userMapper.findUser(uname, password);
+    }
+
+    public List<User> findAllUser() {
+        return userMapper.findAllUser();
     }
 }
