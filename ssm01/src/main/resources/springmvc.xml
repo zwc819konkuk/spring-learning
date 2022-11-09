@@ -32,8 +32,8 @@
     <!--3、视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--指定路径的前缀和后缀-->
-        <property name="prefix" value="/WEB-INF/view/"/>
-        <property name="suffix" value=".jsp"/>
+<!--        <property name="prefix" value="/WEB-INF/view/"/>-->
+<!--        <property name="suffix" value=".jsp"/>-->
     </bean>
 
     <!--配置静态资源放行-->

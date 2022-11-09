@@ -1,6 +1,9 @@
 package com.zwc.service;
 
+import com.zwc.pojo.User;
+
 public interface UserService {
+    User findUser(String uname, String password);
     /*
     * SQLSession.getMapper()
     *
