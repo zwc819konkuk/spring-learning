@@ -14,5 +14,7 @@
     requestScope:msg:${requestScope.msg},uname:${requestScope.users[0].uname}<br/>
     sessionScope:msg:${sessionScope.msg},uname:${sessionScope.users[0].uname}<br/>
     applicationScope:msg:${applicationScope.msg},uname:${applicationScope.users[0].uname}<br/>
+
+    requestParam:msg:${param.msg}
 </body>
 </html>
