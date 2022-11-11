@@ -12,6 +12,7 @@
         <module name="spring_jdbctemplate_01" />
         <module name="spring_aop_01" />
         <module name="springmvc_01" />
+        <module name="ssm01" />
         <module name="spring-ioc" />
       </profile>
     </annotationProcessing>
@@ -22,6 +23,7 @@
       <module name="spring_jdbctemplate_01" target="1.5" />
       <module name="spring_tx_01" target="1.5" />
       <module name="springmvc_01" target="1.5" />
+      <module name="ssm01" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
