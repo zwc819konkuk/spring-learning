@@ -49,7 +49,7 @@ public class FileUploadController {
 
         //上传成功之后，把文件的名字和类型返回给浏览器
         map.put("message","upload success");
-        map.put("fileName",newFileName);
+        map.put("newFileName",newFileName);
         String contentType = headPhoto.getContentType();
         map.put("fileType",contentType);
 
