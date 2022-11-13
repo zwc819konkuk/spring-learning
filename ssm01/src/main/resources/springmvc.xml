@@ -41,5 +41,8 @@
     <mvc:resources mapping="/upload/**" location="/upload/"/>
 
     <!--配置文件上传解析组件  前端中的formData->multipartFile-->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--控制文件大小-->
+<!--        <property name="maxUploadSize" value="5242880"/>-->
+    </bean>
 </beans>

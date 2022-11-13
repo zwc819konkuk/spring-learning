@@ -8,6 +8,8 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 @Controller
@@ -15,7 +17,13 @@ public class FileUploadController {
 
     @ResponseBody
     @RequestMapping("fileUpload.do")
-    public String fileUpload(MultipartFile headPhoto, HttpServletRequest req) throws Exception {
+    public Map<String,String> fileUpload(MultipartFile headPhoto, HttpServletRequest req) throws Exception {
+        Map<String,String> map = new HashMap<String, String>();
+        long size = headPhoto.getSize();
+        if (size > 1024*1024*5){
+            map.put("message","the file is too big");
+            return map;
+        }
         //指定文件存储目录为我们项目部署环境下的upload目录
         String realPath = req.getServletContext().getRealPath("/upload");
         File dir = new File(realPath);
@@ -28,6 +36,10 @@ public class FileUploadController {
         String uuid = UUID.randomUUID().toString();
         //获取拓展名
         String extendsName = originalFilename.substring(originalFilename.lastIndexOf("."));
+        if (!extendsName.equals(".jpg")){
+            map.put("message","must be jpg");
+            return map;
+        }
         // 新的文件名
         String newFileName = uuid.concat(extendsName);
         //文件存储位置
@@ -35,6 +47,12 @@ public class FileUploadController {
         //文件保存
         headPhoto.transferTo(file);
 
-        return "OK";
+        //上传成功之后，把文件的名字和类型返回给浏览器
+        map.put("message","upload success");
+        map.put("fileName",newFileName);
+        String contentType = headPhoto.getContentType();
+        map.put("fileType",contentType);
+
+        return map;
     }
 }
