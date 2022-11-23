@@ -9,6 +9,11 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/mydb?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 12345
+  main:
+    allow-circular-references: true
 mybatis:
   type-aliases-package: com.zwc.pojo
   mapper-locations: classpath:mybatis/*.xml
+
+
+
