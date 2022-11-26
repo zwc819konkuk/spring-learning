@@ -1,8 +1,7 @@
 package com.zwc;
 
-import com.zwc.bean.User;
 import com.zwc.config.SpringConfig;
-import com.zwc.service.impl.UserServiceImpl;
+import com.zwc.service.UserServiceImpl;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
